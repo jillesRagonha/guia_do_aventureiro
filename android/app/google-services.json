@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "174187976831",
+    "firebase_url": "https://guia-do-aventureiro.firebaseio.com",
+    "project_id": "guia-do-aventureiro",
+    "storage_bucket": "guia-do-aventureiro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174187976831:android:a49b594d3a86bf2fe5474a",
+        "android_client_info": {
+          "package_name": "br.com.agilles.guiadoaventureiro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174187976831-2a6vq88eo1ef4evi1uj61updcj4fek2e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.agilles.guiadoaventureiro",
+            "certificate_hash": "53ed9d152f943a973c1c5d17fc569229c460a1b4"
+          }
+        },
+        {
+          "client_id": "174187976831-fkc2lle1ihjkkiko7n7kvfaq1vf1ibl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5sAYzO5QQq08dXErWIVEr42LpspgkPdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174187976831-fkc2lle1ihjkkiko7n7kvfaq1vf1ibl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
