@@ -60,7 +60,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
             child: RaisedButton(
               color: Colors.deepPurple[600].withOpacity(.6),
               onPressed: () {
-               controller.fazerLoginGoogle();
+                controller.fazerLoginGoogle();
 //              controller.fazerLoginEmailSenha();
               },
               child: Text(
@@ -94,20 +94,30 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Container(
-                    width: 30,
-                    height: 30,
-                    child: FaIcon(
-                      FontAwesomeIcons.google,
-                      color: Colors.redAccent,
+                  CircleAvatar(
+                    backgroundColor: Colors.white.withOpacity(0.5),
+                    child: Container(
+                      width: 30,
+                      height: 30,
+                      child: Center(
+                        child: FaIcon(
+                          FontAwesomeIcons.google,
+                          color: Colors.redAccent,
+                        ),
+                      ),
                     ),
                   ),
-                  Container(
-                    width: 30,
-                    height: 30,
-                    child: FaIcon(
-                      FontAwesomeIcons.phone,
-                      color: Colors.blue,
+                  CircleAvatar(
+                    backgroundColor: Colors.white.withOpacity(0.5),
+                    child: Container(
+                      width: 30,
+                      height: 30,
+                      child: Center(
+                        child: FaIcon(
+                          FontAwesomeIcons.phone,
+                          color: Colors.blue,
+                        ),
+                      ),
                     ),
                   ),
                 ],
