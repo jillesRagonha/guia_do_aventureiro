@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:guiadoaventureiro/app/core/firebase/interfaces/auth_repository_interface.dart';
 import 'package:guiadoaventureiro/app/core/firebase/responses/response_status.dart';
@@ -12,20 +13,32 @@ class LoginController = _LoginControllerBase with _$LoginController;
 abstract class _LoginControllerBase with Store {
   @observable
   UsuarioModel usuarioModel = UsuarioModel();
+  FirebaseUser user;
 
   @action
-  Future<void> fazerLoginEmailSenha() async {
+  Future<void> fazerLoginEmailSenha() async {}
 
-  }
+  @action
+  Future<void> fazerLoginComTelefone() async {}
 
   @action
   Future<void> fazerLoginGoogle() async {
     await Modular.get<IAuthRepository>().doLoginGoogle().then((resultado) {
       if (resultado.status == ResponseStatus.SUCESSO) {
-        print("Sucesso -----> ${resultado.mensagem}");
+        usuarioModel = converterFirebaseUserEmModel(resultado.objeto);
+        Modular.to.pushNamed('/home', arguments: usuarioModel);
+
+
       } else {
         print("FALHA -----> ${resultado.toString()}");
       }
     });
+  }
+
+  UsuarioModel converterFirebaseUserEmModel(FirebaseUser user) {
+    usuarioModel.nome = user.displayName;
+    usuarioModel.email = user.email;
+    usuarioModel.foto = user.photoUrl;
+    return usuarioModel;
   }
 }

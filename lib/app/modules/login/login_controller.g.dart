@@ -29,9 +29,18 @@ mixin _$LoginController on _LoginControllerBase, Store {
   final _$fazerLoginEmailSenhaAsyncAction = AsyncAction('fazerLoginEmailSenha');
 
   @override
-  Future fazerLoginEmailSenha() {
+  Future<void> fazerLoginEmailSenha() {
     return _$fazerLoginEmailSenhaAsyncAction
         .run(() => super.fazerLoginEmailSenha());
+  }
+
+  final _$fazerLoginComTelefoneAsyncAction =
+      AsyncAction('fazerLoginComTelefone');
+
+  @override
+  Future<void> fazerLoginComTelefone() {
+    return _$fazerLoginComTelefoneAsyncAction
+        .run(() => super.fazerLoginComTelefone());
   }
 
   final _$fazerLoginGoogleAsyncAction = AsyncAction('fazerLoginGoogle');
