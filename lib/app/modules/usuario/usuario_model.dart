@@ -3,8 +3,9 @@ class UsuarioModel {
   String email;
   String senha;
   String telefone;
+  String foto;
 
-  UsuarioModel({this.nome, this.email, this.senha, this.telefone});
+  UsuarioModel({this.nome, this.email, this.senha, this.telefone, this.foto});
 
   @override
   String toString() {

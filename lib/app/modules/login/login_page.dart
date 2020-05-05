@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:guiadoaventureiro/app/modules/login/widgets/background.dart';
+import 'package:guiadoaventureiro/app/modules/login/widgets/login_button.dart';
 import 'package:guiadoaventureiro/app/modules/login/widgets/login_text_field.dart';
 import 'login_controller.dart';
 
@@ -60,7 +61,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
             child: RaisedButton(
               color: Colors.deepPurple[600].withOpacity(.6),
               onPressed: () {
-               controller.fazerLoginGoogle();
+                controller.fazerLoginGoogle();
 //              controller.fazerLoginEmailSenha();
               },
               child: Text(
@@ -94,21 +95,17 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Container(
-                    width: 30,
-                    height: 30,
-                    child: FaIcon(
-                      FontAwesomeIcons.google,
-                      color: Colors.redAccent,
-                    ),
+                  LoginButton(
+                    function: controller.fazerLoginGoogle,
+                    color: Colors.transparent,
+                    corIcone: Colors.red,
+                    icon: FontAwesomeIcons.google,
                   ),
-                  Container(
-                    width: 30,
-                    height: 30,
-                    child: FaIcon(
-                      FontAwesomeIcons.phone,
-                      color: Colors.blue,
-                    ),
+                  LoginButton(
+                    function: controller.fazerLoginEmailSenha,
+                    color: Colors.transparent,
+                    corIcone: Colors.blue,
+                    icon: FontAwesomeIcons.phone,
                   ),
                 ],
               ),
