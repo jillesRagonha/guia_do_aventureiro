@@ -12,7 +12,10 @@ class LoginController = _LoginControllerBase with _$LoginController;
 
 abstract class _LoginControllerBase with Store {
   @observable
-  UsuarioModel usuarioModel = UsuarioModel();
+  UsuarioModel usuarioModel;
+
+  _LoginControllerBase({this.usuarioModel});
+
   FirebaseUser user;
 
   @action
