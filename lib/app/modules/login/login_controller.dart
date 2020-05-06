@@ -12,7 +12,7 @@ class LoginController = _LoginControllerBase with _$LoginController;
 
 abstract class _LoginControllerBase with Store {
   @observable
-  UsuarioModel usuarioModel;
+  UsuarioModel usuarioModel = Modular.get<UsuarioModel>();
 
   _LoginControllerBase({this.usuarioModel});
 
@@ -39,6 +39,7 @@ abstract class _LoginControllerBase with Store {
   }
 
   UsuarioModel converterFirebaseUserEmModel(FirebaseUser user) {
+
     usuarioModel.nome = user.displayName;
     usuarioModel.email = user.email;
     usuarioModel.foto = user.photoUrl;

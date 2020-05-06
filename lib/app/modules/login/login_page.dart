@@ -29,7 +29,6 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
           Background(),
           Positioned(
             top: mediaQuery.size.height * .3,
-            bottom: 0,
             left: 0,
             right: 0,
             child: LoginTextField(
@@ -41,8 +40,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
             ),
           ),
           Positioned(
-            top: mediaQuery.size.height * .40,
-            bottom: 0,
+            top: mediaQuery.size.height * .4,
             left: 0,
             right: 0,
             child: LoginTextField(
@@ -58,6 +56,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
             top: mediaQuery.size.height * .51,
             left: 100,
             right: 100,
+
             child: RaisedButton(
               color: Colors.deepPurple[600].withOpacity(.6),
               onPressed: () {

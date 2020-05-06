@@ -6,15 +6,15 @@ import 'home_controller.dart';
 class HomePage extends StatefulWidget {
   final String title;
   final UsuarioModel usuarioModel;
-  const HomePage({Key key, this.title = "Home", this.usuarioModel}) : super(key: key);
+
+  const HomePage({Key key, this.title = "Home", this.usuarioModel})
+      : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends ModularState<HomePage, HomeController> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +23,10 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       ),
       body: Column(
         children: <Widget>[
-          Text(widget.usuarioModel.nome)
+          Text(widget.usuarioModel.nome),
+          CircleAvatar(
+            child: Image.network(widget.usuarioModel.foto),
+          )
         ],
       ),
     );
