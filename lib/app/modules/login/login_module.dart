@@ -3,11 +3,12 @@ import 'package:guiadoaventureiro/app/modules/home/home_module.dart';
 import 'package:guiadoaventureiro/app/modules/home/home_page.dart';
 import 'package:guiadoaventureiro/app/modules/login/login_controller.dart';
 import 'package:guiadoaventureiro/app/modules/login/login_page.dart';
+import 'package:guiadoaventureiro/app/modules/usuario/usuario_model.dart';
 
 class LoginModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        Bind((i) => LoginController()),
+        Bind((i) => LoginController(usuarioModel: i.get<UsuarioModel>())),
       ];
 
   @override

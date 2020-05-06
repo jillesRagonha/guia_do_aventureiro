@@ -23,7 +23,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       ),
       body: Column(
         children: <Widget>[
-          Text(widget.usuarioModel.nome)
+          Text(controller.usuarioModel.nome + controller.usuarioModel.email)
         ],
       ),
     );

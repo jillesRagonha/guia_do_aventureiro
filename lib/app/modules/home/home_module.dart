@@ -1,11 +1,12 @@
-import 'package:guiadoaventureiro/app/modules/home/home_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:guiadoaventureiro/app/modules/home/home_controller.dart';
 import 'package:guiadoaventureiro/app/modules/home/home_page.dart';
+import 'package:guiadoaventureiro/app/modules/usuario/usuario_model.dart';
 
 class HomeModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        Bind((i) => HomeController()),
+        Bind((i) => HomeController(usuarioModel: i.get<UsuarioModel>())),
       ];
 
   @override

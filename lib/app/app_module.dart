@@ -8,17 +8,20 @@ import 'package:guiadoaventureiro/app/core/firebase/repositories/auth_repository
 import 'package:guiadoaventureiro/app/modules/home/home_controller.dart';
 import 'package:guiadoaventureiro/app/modules/home/home_module.dart';
 import 'package:guiadoaventureiro/app/modules/login/login_controller.dart';
+import 'package:guiadoaventureiro/app/modules/usuario/usuario_model.dart';
 
 import 'modules/login/login_module.dart';
 
 class AppModule extends MainModule {
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+  UsuarioModel usuarioModel = UsuarioModel();
 
   @override
   List<Bind> get binds => [
         Bind((i) => AppController()),
-        Bind((i) => HomeController()),
-        Bind((i) => LoginController()),
+        Bind((i) => HomeController(usuarioModel: usuarioModel)),
+        Bind((i) => LoginController(usuarioModel: usuarioModel)),
+        Bind<UsuarioModel>((i) => UsuarioModel()),
         Bind<IAuthRepository>((i) => AuthRepository(firebaseAuth)),
       ];
 
