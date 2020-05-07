@@ -25,7 +25,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         children: <Widget>[
           Text(widget.usuarioModel.nome),
           CircleAvatar(
-            child: Image.network(widget.usuarioModel.foto),
+            child: Image.network(controller.usuarioModel.foto),
           )
         ],
       ),

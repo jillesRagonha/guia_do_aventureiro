@@ -6,7 +6,7 @@ import 'package:guiadoaventureiro/app/modules/usuario/usuario_model.dart';
 class HomeModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        Bind((i) => HomeController(usuarioModel: i.get<UsuarioModel>())),
+        Bind((i) => HomeController()),
       ];
 
   @override

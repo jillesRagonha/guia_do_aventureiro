@@ -19,7 +19,7 @@ class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
         Bind((i) => AppController()),
-        Bind((i) => HomeController()),
+        Bind((i) => HomeController(usuarioModel: i.args.data)),
         Bind((i) => LoginController()),
         Bind<UsuarioModel>((i) => UsuarioModel()),
         Bind<IAuthRepository>((i) => AuthRepository(firebaseAuth)),

@@ -30,8 +30,6 @@ abstract class _LoginControllerBase with Store {
       if (resultado.status == ResponseStatus.SUCESSO) {
         usuarioModel = converterFirebaseUserEmModel(resultado.objeto);
         Modular.to.pushNamed('/home', arguments: usuarioModel);
-
-
       } else {
         print("FALHA -----> ${resultado.toString()}");
       }
@@ -39,7 +37,10 @@ abstract class _LoginControllerBase with Store {
   }
 
   UsuarioModel converterFirebaseUserEmModel(FirebaseUser user) {
+    if (usuarioModel == null) {
+      usuarioModel = UsuarioModel();
 
+    }
     usuarioModel.nome = user.displayName;
     usuarioModel.email = user.email;
     usuarioModel.foto = user.photoUrl;
