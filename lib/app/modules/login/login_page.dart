@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:guiadoaventureiro/app/modules/login/widgets/background.dart';
 import 'package:guiadoaventureiro/app/modules/login/widgets/login_button.dart';
 import 'package:guiadoaventureiro/app/modules/login/widgets/login_text_field.dart';
@@ -56,20 +57,19 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
             top: mediaQuery.size.height * .51,
             left: 100,
             right: 100,
-
             child: RaisedButton(
               color: Colors.deepPurple[600].withOpacity(.6),
               onPressed: () {
                 controller.fazerLoginGoogle();
 //              controller.fazerLoginEmailSenha();
               },
-              child: Text(
-                "Entrar",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
+              child: Text("Entrar",
+                  style: GoogleFonts.pacifico(
+                    textStyle: TextStyle(
+                        color: Colors.white,
+
+                        fontSize: 20),
+                  )),
             ),
           ),
           Positioned(

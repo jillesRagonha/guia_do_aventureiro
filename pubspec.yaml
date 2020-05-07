@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  google_fonts: ^1.0.0
   google_sign_in: ^4.4.4
   firebase_auth: ^0.16.0
   font_awesome_flutter: ^8.8.1
@@ -53,6 +54,11 @@ flutter:
   assets:
    - assets/images/background.jpg
    - assets/images/paper.jpg
+   - assets/images/home_background.png
+   - assets/images/Ulfric.jpeg
+   - assets/images/Calina.jpg
+   - assets/images/bron.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

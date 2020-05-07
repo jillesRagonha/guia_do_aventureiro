@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginTextField extends StatelessWidget {
   final String hint;
@@ -16,7 +17,7 @@ class LoginTextField extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: TextFormField(
         onChanged: onChange,
-        style: TextStyle(color: Colors.white),
+        style: GoogleFonts.pacifico(textStyle: TextStyle(color: Colors.white)),
         decoration: InputDecoration(
           prefixIcon: Icon(icon),
           filled: true,
