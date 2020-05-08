@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -63,13 +64,10 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                 controller.fazerLoginGoogle();
 //              controller.fazerLoginEmailSenha();
               },
-              child: Text("Entrar",
-                  style: GoogleFonts.pacifico(
-                    textStyle: TextStyle(
-                        color: Colors.white,
-
-                        fontSize: 20),
-                  )),
+              child: Text(
+                "Entrar",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
             ),
           ),
           Positioned(
@@ -98,7 +96,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                     function: controller.fazerLoginGoogle,
                     color: Colors.transparent,
                     corIcone: Colors.red,
-                    icon: FontAwesomeIcons.google,
+                    icon: FontAwesome5.user,
                   ),
                   LoginButton(
                     function: controller.fazerLoginEmailSenha,

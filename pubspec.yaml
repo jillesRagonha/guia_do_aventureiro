@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  flutter_icons: ^1.1.0
   google_fonts: ^1.0.0
   google_sign_in: ^4.4.4
   firebase_auth: ^0.16.0

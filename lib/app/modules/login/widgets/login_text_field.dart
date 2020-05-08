@@ -17,7 +17,7 @@ class LoginTextField extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: TextFormField(
         onChanged: onChange,
-        style: GoogleFonts.pacifico(textStyle: TextStyle(color: Colors.white)),
+        style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
           prefixIcon: Icon(icon),
           filled: true,
