@@ -11,8 +11,8 @@ part 'login_controller.g.dart';
 class LoginController = _LoginControllerBase with _$LoginController;
 
 abstract class _LoginControllerBase with Store {
-  @observable
-  UsuarioModel usuarioModel = Modular.get<UsuarioModel>();
+
+  UsuarioModel usuarioModel;
 
   _LoginControllerBase({this.usuarioModel});
 
@@ -29,7 +29,7 @@ abstract class _LoginControllerBase with Store {
     await Modular.get<IAuthRepository>().doLoginGoogle().then((resultado) {
       if (resultado.status == ResponseStatus.SUCESSO) {
         usuarioModel = converterFirebaseUserEmModel(resultado.objeto);
-        Modular.to.pushNamed('/home', arguments: usuarioModel);
+        Modular.to.pushNamed('/home');
       } else {
         print("FALHA -----> ${resultado.toString()}");
       }

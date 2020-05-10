@@ -15,12 +15,11 @@ import 'modules/login/login_module.dart';
 class AppModule extends MainModule {
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
 
-
   @override
   List<Bind> get binds => [
         Bind((i) => AppController()),
-        Bind((i) => HomeController(usuarioModel: i.args.data)),
-        Bind((i) => LoginController()),
+        Bind((i) => HomeController(usuarioModel: i.get())),
+        Bind((i) => LoginController(usuarioModel: i.get())),
         Bind<UsuarioModel>((i) => UsuarioModel()),
         Bind<IAuthRepository>((i) => AuthRepository(firebaseAuth)),
       ];

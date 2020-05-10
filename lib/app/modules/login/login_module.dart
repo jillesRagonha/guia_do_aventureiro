@@ -8,13 +8,13 @@ import 'package:guiadoaventureiro/app/modules/usuario/usuario_model.dart';
 class LoginModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        Bind((i) => LoginController(usuarioModel: i.get<UsuarioModel>())),
+        Bind((i) => LoginController()),
       ];
 
   @override
   List<Router> get routers => [
         Router(Modular.initialRoute, child: (_, args) => LoginPage()),
-        Router('/home', child: (_, args) => HomePage(usuarioModel: args.data,)),
+        Router('/home', child: (_, args) => HomePage()),
       ];
 
   static Inject get to => Inject<LoginModule>.of();

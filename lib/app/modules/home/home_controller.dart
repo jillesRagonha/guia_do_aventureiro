@@ -4,11 +4,13 @@ import 'package:guiadoaventureiro/app/modules/usuario/usuario_model.dart';
 import 'package:mobx/mobx.dart';
 
 part 'home_controller.g.dart';
-
 class HomeController = _HomeControllerBase with _$HomeController;
 
 abstract class _HomeControllerBase with Store {
-  UsuarioModel usuarioModel ;
+  UsuarioModel usuarioModel;
 
-  _HomeControllerBase({this.usuarioModel});
+  _HomeControllerBase({this.usuarioModel}) {
+    print("----------> Entrei no HomeController<---------------" +
+        usuarioModel.toString());
+  }
 }
