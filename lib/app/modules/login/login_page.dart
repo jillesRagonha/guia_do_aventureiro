@@ -96,7 +96,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                     function: controller.fazerLoginGoogle,
                     color: Colors.transparent,
                     corIcone: Colors.red,
-                    icon: FontAwesome5.user,
+                    icon: FontAwesome.google,
                   ),
                   LoginButton(
                     function: controller.fazerLoginEmailSenha,

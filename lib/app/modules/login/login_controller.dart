@@ -37,10 +37,7 @@ abstract class _LoginControllerBase with Store {
   }
 
   UsuarioModel converterFirebaseUserEmModel(FirebaseUser user) {
-    if (usuarioModel == null) {
-      usuarioModel = UsuarioModel();
 
-    }
     usuarioModel.nome = user.displayName;
     usuarioModel.email = user.email;
     usuarioModel.foto = user.photoUrl;

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:guiadoaventureiro/app/modules/home/widgets/home_background.dart';
 import 'package:guiadoaventureiro/app/modules/home/widgets/home_card.dart';
-import 'package:guiadoaventureiro/app/modules/usuario/usuario_model.dart';
+
 import 'home_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,14 +24,50 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
+          Text(
+            controller.usuarioModel.nome,
+            style: TextStyle(fontSize: 22, color: Colors.white),
+          ),
           HomeBackground(),
+          Positioned(
+            top: mediaQuery.size.height * .1,
+            left: 5,
+            child: CircleAvatar(
+              minRadius: 30,
+              backgroundImage: NetworkImage(controller.usuarioModel.foto),
+            ),
+          ),
+          Positioned(
+            top: mediaQuery.size.height * .1,
+            left: 70,
+            child: Container(
+              child: Center(
+                child: Text(
+                  "Bem Vindo  ${controller.usuarioModel.nome}",
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: mediaQuery.size.height * .14,
+            left: 70,
+            child: Container(
+              child: Center(
+                child: Text(
+                  "Quem você será hoje?",
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
+              ),
+            ),
+          ),
           Positioned(
             top: mediaQuery.size.height * .3,
             left: 0,
             right: 0,
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withOpacity(0.0),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(50),
                   topRight: Radius.circular(50),
